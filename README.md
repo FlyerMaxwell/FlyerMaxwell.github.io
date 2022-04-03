@@ -1,1 +1,1 @@
-This homepage references handsome Yunning's homepage(https://github.com/gaoyuanning/gaoyuanning.github.io).
+The template is borrowed from Yunning's homepage(https://github.com/gaoyuanning/gaoyuanning.github.io).
