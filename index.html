@@ -76,22 +76,76 @@
         <h2>Research Projects (To be detailed)</h2>
         <ul>
             <li>
-                <p>10/2022 - Present: LiCode. </p>
+                <p><b>Neighbor Distribution Esrimation in Vehicular Networks. (Finished)</b></p> 
+                <p>Abstract: Acquiring the geographical distribution of neighbors can support more adaptive media access control (MAC) protocols and other safety applications in Vehicular ad hoc network (VANETs). However, it is very challenging for each vehicle to estimate its own neighbor distribution in a fully distributed setting. In this project, we propose an online distributed neighbor distribution estimation scheme, called PeerProbe, in which vehicles collaborate with each other to probe their own neighborhood via simultaneous symbol-level wireless communication. An adaptive compressive sensing algorithm is developed to recover a neighbor distribution based on a small number of random probes with non-negligible noise. Moreover, the needed number of probes adapts to the sparseness of the distribution. We implement a prototype system with four USRP N210 to verify the feasibility of PeerProbe in various typical vehicular channel conditions. We further conduct extensive simulations with VENUS simulator and the results demonstrate that PeerProbe is lightweight and can accurately recover highly dynamic neighbor distributions in critical channel conditions.</p>
+                <table class="imgtable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="./yunxiang_files/Prototype.png" alt="photo" width="350px" >&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>My contribution: algorithm and system design, simulation, prototype establishment.</p>
+                <p>Skills: 802.11 protocol simulation (MATLAB & C), prototype with GNU radio (C++ & Python) and USRP. </p> 
+            </li>
+
+            <li>
+                <p><b>Online Vehicular Direction Finding based on a Deep Learning Method. (Ongoing)</b></p> 
+                <p>Abstract: Relative direction estimation among neighboring vehicles in an urban environment is essential to a wide variety of driving safety applications. To obtain accurate direction information solely from vehicle-to-vehicle (V2V) communications is desirable but very challenging due to the highly dynamic vehicular environments. In this project, we first propose an online vehicular AoA estimation scheme, called DeepAoA, based on a deep learning method. More specifically, Channel state information (CSI) is estimated from a set of synchronized receiving radios by a receiver vehicle. By taking the CSI phase difference between a pair of such radios, CSI phase errors in baseband can be effectively eliminated, which makes CSI phase difference a compelling feature to represent the direction of incident radio frequency (RF) signals and the dynamic channel characteristics. A convolutional neural network (CNN) model is then trained with labeled samples of CSI phase difference. We implement a prototype of DeepAoA receiver using four synchronized USRPs with their antennas in uniform circular array (UCA) configuration for a full field of view. We collect real-world CSI traces and conduct trace-driven simulations. DeepAoA can achieve AoA estimation errors of less than 3◦ with a 98% confidence interval with four antennas. The results demonstrate the efficacy of DeepAoA in the static scenario. After the work of DeepAOA, we find a more fundamental problem in the process of implementation of AI application, the domain adaption problem. The trained model cannot deal with dynamic environments. We try to collect a real-world dataset in the dynamic driving scenario and use generative models to conquer the dynamic domain adaption problem.</p>
+                <table class="imgtable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="./yunxiang_files/deepAOA.png" alt="photo" width="350px" >&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>My contribution: algorithm and system design (mainly for ground truth acquirement), prototype establishment, dataset collection. </p>
+                <p>Skills: Generative Models,i.e. VAE & GAN (Python), Object tracking with Lidar (Python), 802.11 protocol simulation (MATLAB & C), prototype with GNU radio (C++ & Python) and USRP. </p> 
+            </li>
+
+            <li>
+                <p><b>Smart Traffic Sign for Multimodal Autopilot. (Ongoing)</b></p> 
+                <p>Abstract: To be detailed. </p>
+                <p>My contribution: system design and mplementation.</p>
+                <p>Skills: object detection and classification with lidar and camera.</p>
             </li>
             <li>
-                <p>6/2021 - Present: DeeperAOA. </p>
+                <p><b>Flexible Media Access Control Protocol (MAC) Design in IoVs. (Ongoing)</b></p> 
+                <p>Abstract: To be detailed. </p>
+                <p>My contribution: protocol design.</p>
+                <p>Skills: trace driven simulation (C)</p>
             </li>
+
             <li>
-                <p>3/2019 - 12/2020: Neighbor Distribution Esrimation in IoVs. </p>
+                <p><b>Solving Schrodinger Equation with AI. (Finished for now)</b></p> 
+                <p>Abstract: This is a the topic of my theis as a undergraduate student major in Physics. The core idea is similar with <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.042113"></a> Deep learning and the Schrödinger equation (The blow figure is from this paper). I try to solve the Schrodinger Equation with different neural networks. The core idea is that we try to translate Schrodinger Equation and the constraints into different representation forms. A related basic scientific probelem is that can we use neural networks to solve mathematical equations? In this project, I learn and try different neural networks, but no breakthroughs has been made: ). However, I still think it's a very interesting and challenging question. </p>
+                <table class="imgtable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="./yunxiang_files/equation.png" alt="photo" width="350px" >&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>My contribution: algorithm design and simulations (python). </p>
+                <p>Skills: basic knowledge about neural network(python).</p>
             </li>
+
             <li>
-                <p>9/2018 - 9/2019 : Flexible Media Access Control Protocol (MAC) Design in IoVs</p>
-            </li>
-            <li>
-                <p>10/2017 - 6/2018: Solving Schrodinger Equation with Convolutional Neural Networks</p> 
-            </li>
-            <li>
-                <p>10/2015 - 6/2017: Circuit Design for Underwater Quantum Key Distribution</p>
+                <p><b>10/2015 - 6/2017: Circuit Design for Underwater Quantum Key Distribution. (Finished)</b></p>
+                <p>Abstract: This is a National Undergraduate Electronic Design Competition project. I am the leader of this project supervised by <a href="http://it.ouc.edu.cn/sigmaouc/2021/1118/c25602a356923/page.htm">Prof. Yongjian Gu</a> and <a href="http://it.ouc.edu.cn/lwd/main.htm"> Dr. Wendong Li.</a> Quantum key distribution (QKD) is a secure communication method which implements a cryptographic protocol involving components of quantum mechanics. It enables two parties to produce a shared random secret key known only to them, which can then be used to encrypt and decrypt messages. In this project, we mainly focus the circuit design of the system. We design a circuit to control the lassers and implement a prototype running under BB84 protocol. </p>
+                <table class="imgtable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="./yunxiang_files/SRDP.png" alt="photo" width="350px" >&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>My contribution: circuit design, prototype establishment. </p>
+                <p>Skills: Circuit design (Altium Designer), FPGA programming (Verilog).</p>
             </li>
         </ul>
 
