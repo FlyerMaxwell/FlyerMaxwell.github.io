@@ -11,6 +11,36 @@
     <link rel="stylesheet" href="./yunxiang_files/person.css" type="text/css">
     <title>Yunxiang Cai</title>
     <script type="text/javascript" src="./yunxiang_files/jquery-1.12.4.min.js.下载"></script>
+    
+    <script>
+        function showMore(blockId) {
+          var block = document.getElementById(blockId);
+          if (!block) return; // 如果找不到对应的块，则直接返回
+        
+          if (block.style.display === "none") {
+            block.style.display = "block";
+          } else {
+            block.style.display = "none";
+          }
+        
+          // 创建一个新的段落元素，作为要显示的更多信息内容
+          var moreInfoText = document.createElement("p");
+          moreInfoText.textContent = "This is more detailed information for " + blockId + " that is dynamically generated.";
+        
+          // 在按钮后面插入新创建的段落元素
+          var btn = document.querySelector("button[value='" + blockId + "']");
+          if (btn) {
+            btn.parentNode.insertBefore(moreInfoText, btn.nextSibling);
+          }
+        }
+    </script>
+    
+    <style>
+        /* 样式可以根据需要自定义 */
+        .more-info-block {
+          display: none; /* 初始隐藏 */
+        }
+    </style>
 </head>
 
 <body>
@@ -120,7 +150,12 @@
         <h2 id="Research Projects">Research Projects</h2>
         <ul>
             <li>
-                <p><b>[PeerProbe] Neighbor Distribution Estimation in Vehicular Networks. (Finished)</b></p> 
+                <p><b>[PeerProbe] Neighbor Distribution Estimation in Vehicular Networks. (Finished)</b><button onclick="showMore('block1')">Show More Information</button></p> 
+                <div id="block1" class="more-info-block">
+                    <!-- 这里是要显示的更多信息内容1 -->
+                    <p>This is more detailed information 1 that is initially hidden.</p>
+                </div>
+
                 <p>Acquiring the geographical distribution of neighbors can support more adaptive media access control (MAC) protocols and other safety applications in Vehicular ad hoc network (VANETs). However, it is very challenging for each vehicle to estimate its own neighbor distribution in a fully distributed setting. In this project, we propose an online distributed neighbor distribution estimation scheme, called PeerProbe, in which vehicles collaborate with each other to probe their own neighborhood via simultaneous symbol-level wireless communication. An adaptive compressive sensing algorithm is developed to recover a neighbor distribution based on a small number of random probes with non-negligible noise. Moreover, the needed number of probes adapts to the sparseness of the distribution. We further conduct extensive simulations with VENUS simulator and the results demonstrate that PeerProbe is lightweight and can accurately recover highly dynamic neighbor distributions in critical channel conditions. This work is presented in IEEE INFOCOM 2021 (<a href="https://ieeexplore.ieee.org/document/9488841">Distributed Neighbor Distribution Estimation with Adaptive Compressive Sensing in VANETs</a>).</p>
                 <p>Then we modify the proposed method to be more robust and implement a prototype system with four USRP N210 to verify the feasibility of PeerProbe in various typical vehicular channel conditions. Besides, we show two typical use cases to show the potential of the proposed method. This work is accepted to appear in IEEE/ACM TON (<a href="https://ieeexplore.ieee.org/document/9712634">PeerProbe: Estimating Vehicular Neighbor Distribution With Adaptive Compressive Sensing</a>). Moreover, one patent of the scheme has been authorized.</p>
                 <!-- <p>We extend the scenario of neighnor discovery problem from V2X communication with DSRC or LTE devices to millimeter-wave vehicular networks and design a one-hop multicasting media access control (MAC) protocol. This work is presented in IEEE ICDCS 2022(<a href="https://lion.sjtu.edu.cn/publication/publicationDetail?id=81">mmV2V: Combating One-hop Multicasting in Millimeter-wave Vehicular Networks</a>). -->
